@@ -1,0 +1,22 @@
+print("--- Testing 'safe' syntax in PyNova ---")
+
+print("\n1. Division by zero inside safe block:")
+safe:
+    result = 10 / 0
+    print("This will not print:", result)
+
+print("Program continues smoothly after division error.")
+
+print("\n2. Key error inside safe block:")
+safe:
+    data = {"name": "PyNova"}
+    print(data["unknown_key"])
+
+print("Program continues smoothly after key error.")
+
+print("\n3. Normal execution inside safe block:")
+safe:
+    val = 100 * 2
+    print("Normal block executed cleanly:", val)
+
+print("Safe syntax test complete.")

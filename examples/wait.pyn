@@ -1,0 +1,16 @@
+import time
+
+print("--- Testing 'wait' syntax in PyNova ---")
+
+t0 = time.time()
+print("Starting wait for 0.5 seconds...")
+wait 0.5
+elapsed = time.time() - t0
+print(f"Wait finished. Actual elapsed time: {elapsed:.3f} seconds.")
+
+t1 = time.time()
+delay = 0.25
+print(f"Waiting with variable expression ({delay}s)...")
+wait delay
+elapsed2 = time.time() - t1
+print(f"Second wait finished. Actual elapsed time: {elapsed2:.3f} seconds.")

@@ -1,0 +1,56 @@
+# ===============================
+# Pyion (.gitignore)
+# ===============================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# PyInstaller & Build Intermediates
+build/
+*.manifest
+warn-*.txt
+xref-*.html
+
+# CPython compilation artifacts & object files
+*.obj
+*.o
+*.lib
+*.a
+*.pdb
+*.exp
+*.ilk
+*.idb
+cpython/build/
+cpython/PCbuild/amd64/
+cpython/PCbuild/win32/
+cpython/PCbuild/arm64/
+
+# Temporary archives and downloads
+*.tar.gz
+*.tgz
+*.zip
+
+# Virtual Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Editor and OS-specific files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+Thumbs.db
+Desktop.ini
+.DS_Store

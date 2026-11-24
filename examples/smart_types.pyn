@@ -1,0 +1,61 @@
+from pynova import Person, PhoneNumber, EmailAddress, URL, Address
+
+print("--- Testing Smart Data Types in PyNova ---")
+
+# 1. Person
+p = Person("Mohammad Sahil Hossain")
+print("Person full name:", p.full_name)
+print("First name:", p.first_name)
+print("Middle name:", p.middle_name)
+print("Last name:", p.last_name)
+print("Initials:", p.initials)
+
+# Explicit override
+p2 = Person(first_name="Leonardo", last_name="da Vinci")
+print("Explicit Person:", p2.full_name, "| Initials:", p2.initials)
+
+# 2. PhoneNumber
+ph1 = PhoneNumber("+919876543210")
+print("\nPhoneNumber (+919876543210):")
+print("  Country Code:", ph1.country_code)
+print("  National Number:", ph1.national_number)
+print("  Country/Region:", ph1.country)
+print("  Formatted:", ph1.formatted)
+print("  Valid:", ph1.is_valid)
+
+ph2 = PhoneNumber("+16502530000")
+print("PhoneNumber (+16502530000):", ph2.country, ph2.formatted, ph2.is_valid)
+
+# 3. EmailAddress
+em = EmailAddress("sahil@cse.nitagartala.ac.in")
+print("\nEmailAddress:")
+print("  Address:", em.address)
+print("  Username:", em.username)
+print("  Domain:", em.domain)
+print("  Extension:", em.extension)
+print("  Valid:", em.is_valid)
+
+# 4. URL
+u = URL("https://github.com/python/cpython?tab=readme#license")
+print("\nURL:")
+print("  URL:", u.url)
+print("  Protocol:", u.protocol)
+print("  Domain:", u.domain)
+print("  Path:", u.path)
+print("  Query:", u.query)
+print("  Fragment:", u.fragment)
+print("  Secure (HTTPS):", u.is_secure)
+print("  Valid:", u.is_valid)
+
+# 5. Address
+addr = Address(
+    building="Ujjayanta Palace",
+    street="Palace Compound Road",
+    city="Agartala",
+    state="Tripura",
+    country="India",
+    postal_code="799001"
+)
+print("\nAddress:")
+print("  Formatted:", addr.formatted)
+print("  Multi-line:\n" + addr.to_multiline())

@@ -1,0 +1,17 @@
+print("--- Testing 'repeat' syntax in PyNova ---")
+
+print("\n1. Simple repeat:")
+repeat 3:
+    print("  Iteration of repeat 3")
+
+print("\n2. Nested repeat:")
+repeat 2:
+    print("  Outer start")
+    repeat 3:
+        print("    Inner tick")
+    print("  Outer end")
+
+print("\n3. Expression-based repeat:")
+total = 2 + 2
+repeat total:
+    print("  Repeat with calculated count:", total)

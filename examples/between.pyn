@@ -1,0 +1,27 @@
+print("--- Testing 'between' syntax in PyNova ---")
+
+# 1. Simple condition
+score = 85
+if score between 80 and 100:
+    print(f"Grade A: Score {score} is between 80 and 100.")
+
+# 2. Boundary conditions (inclusive)
+val = 18
+if val between 18 and 60:
+    print(f"Inclusive lower bound test passed for {val}.")
+
+val_max = 60
+if val_max between 18 and 60:
+    print(f"Inclusive upper bound test passed for {val_max}.")
+
+# 3. Outside boundaries
+out_val = 10
+if out_val between 18 and 60:
+    print("ERROR: Should not trigger!")
+else:
+    print(f"Correctly determined {out_val} is outside [18, 60].")
+
+# 4. Expressions
+x = 15
+if (x * 2) between 20 and 40:
+    print(f"Expression calculation test passed: {x * 2} is between 20 and 40.")
